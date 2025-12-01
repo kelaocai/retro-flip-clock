@@ -8,7 +8,10 @@
 
 A beautiful, customizable React library for displaying flip card animations inspired by classic mechanical flip clocks and scoreboards.
 
-![Flip Clock Demo](https://your-demo-url.com/flip-clock.gif)
+
+![Screen-2025-12-01-123313](https://github.com/user-attachments/assets/a1bbc5cb-aa56-4690-9484-9164ab3ccf13)
+
+
 
 ### Features
 
