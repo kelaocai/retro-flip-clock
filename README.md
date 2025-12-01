@@ -23,29 +23,29 @@ A beautiful, customizable React library for displaying flip card animations insp
 
 ### Installation
 
-\`\`\`bash
+```bash
 npm install @flip-clock/core
 # or
 yarn add @flip-clock/core
 # or
 pnpm add @flip-clock/core
-\`\`\`
+```
 
 ### Quick Start
 
 #### Basic Clock
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function App() {
   return <FlipClock />
 }
-\`\`\`
+```
 
 #### Custom Clock with 12-hour format
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function App() {
@@ -57,11 +57,11 @@ export default function App() {
     />
   )
 }
-\`\`\`
+```
 
 #### Individual Flip Card
 
-\`\`\`tsx
+```tsx
 import { FlipCard } from '@flip-clock/core'
 
 export default function App() {
@@ -73,7 +73,7 @@ export default function App() {
     />
   )
 }
-\`\`\`
+```
 
 ### Props
 
@@ -81,32 +81,32 @@ export default function App() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| \`format\` | \`'12h' \| '24h'\` | \`'24h'\` | Time format (12-hour or 24-hour) |
-| \`showSeconds\` | \`boolean\` | \`true\` | Show seconds display |
-| \`onTimeChange\` | \`(time) => void\` | - | Callback when time changes |
-| \`containerClassName\` | \`string\` | - | Additional CSS classes for container |
-| \`cardWidth\` | \`string\` | \`'w-24 md:w-28'\` | Tailwind width classes for cards |
-| \`cardHeight\` | \`string\` | \`'h-32 md:h-40'\` | Tailwind height classes for cards |
-| \`animationDuration\` | \`number\` | \`500\` | Animation duration in milliseconds |
+| `format` | `'12h' \| '24h'` | `'24h'` | Time format (12-hour or 24-hour) |
+| `showSeconds` | `boolean` | `true` | Show seconds display |
+| `onTimeChange` | `(time) => void` | - | Callback when time changes |
+| `containerClassName` | `string` | - | Additional CSS classes for container |
+| `cardWidth` | `string` | `'w-24 md:w-28'` | Tailwind width classes for cards |
+| `cardHeight` | `string` | `'h-32 md:h-40'` | Tailwind height classes for cards |
+| `animationDuration` | `number` | `500` | Animation duration in milliseconds |
 
 #### FlipCard
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| \`value\` | \`string\` | Required | Current display value |
-| \`prevValue\` | \`string\` | Required | Previous display value |
-| \`animationDuration\` | \`number\` | \`500\` | Animation duration in milliseconds |
-| \`cardWidth\` | \`string\` | \`'w-24'\` | Tailwind width classes |
-| \`cardHeight\` | \`string\` | \`'h-32'\` | Tailwind height classes |
-| \`fontSize\` | \`number\` | \`90\` | Font size for numbers |
-| \`textColor\` | \`string\` | \`'#e8e8e8'\` | Text color (hex) |
-| \`backgroundColor\` | \`string\` | \`'#1a1a1a'\` | Background color (hex) |
+| `value` | `string` | Required | Current display value |
+| `prevValue` | `string` | Required | Previous display value |
+| `animationDuration` | `number` | `500` | Animation duration in milliseconds |
+| `cardWidth` | `string` | `'w-24'` | Tailwind width classes |
+| `cardHeight` | `string` | `'h-32'` | Tailwind height classes |
+| `fontSize` | `number` | `90` | Font size for numbers |
+| `textColor` | `string` | `'#e8e8e8'` | Text color (hex) |
+| `backgroundColor` | `string` | `'#1a1a1a'` | Background color (hex) |
 
 ### Examples
 
 #### Countdown Timer
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 import { useState, useEffect } from 'react'
 
@@ -123,11 +123,11 @@ export default function Countdown() {
 
   return <FlipClock />
 }
-\`\`\`
+```
 
 #### Scoreboard
 
-\`\`\`tsx
+```tsx
 import { FlipCard } from '@flip-clock/core'
 
 export default function Scoreboard() {
@@ -139,13 +139,13 @@ export default function Scoreboard() {
     </div>
   )
 }
-\`\`\`
+```
 
 ### Customization
 
 #### Custom Theme
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function CustomTheme() {
@@ -158,7 +158,7 @@ export default function CustomTheme() {
     />
   )
 }
-\`\`\`
+```
 
 ### Browser Support
 
@@ -180,7 +180,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 #### Development Setup
 
-\`\`\`bash
+```bash
 # Clone the repository
 git clone https://github.com/yourusername/flip-clock.git
 
@@ -192,7 +192,7 @@ npm run dev
 
 # Build for production
 npm run build
-\`\`\`
+```
 
 ### License
 
@@ -229,29 +229,29 @@ See [CHANGELOG.md](./CHANGELOG.md) for detailed version history.
 
 ### 安装
 
-\`\`\`bash
+```bash
 npm install @flip-clock/core
 # 或
 yarn add @flip-clock/core
 # 或
 pnpm add @flip-clock/core
-\`\`\`
+```
 
 ### 快速开始
 
 #### 基础时钟
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function App() {
   return <FlipClock />
 }
-\`\`\`
+```
 
 #### 自定义 12 小时制时钟
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function App() {
@@ -263,11 +263,11 @@ export default function App() {
     />
   )
 }
-\`\`\`
+```
 
 #### 单个翻牌卡片
 
-\`\`\`tsx
+```tsx
 import { FlipCard } from '@flip-clock/core'
 
 export default function App() {
@@ -279,7 +279,7 @@ export default function App() {
     />
   )
 }
-\`\`\`
+```
 
 ### 属性
 
@@ -287,32 +287,32 @@ export default function App() {
 
 | 属性 | 类型 | 默认值 | 描述 |
 |------|------|--------|------|
-| \`format\` | \`'12h' \| '24h'\` | \`'24h'\` | 时间格式（12小时或24小时） |
-| \`showSeconds\` | \`boolean\` | \`true\` | 是否显示秒数 |
-| \`onTimeChange\` | \`(time) => void\` | - | 时间改变时的回调函数 |
-| \`containerClassName\` | \`string\` | - | 容器的额外 CSS 类名 |
-| \`cardWidth\` | \`string\` | \`'w-24 md:w-28'\` | 卡片宽度 Tailwind 类名 |
-| \`cardHeight\` | \`string\` | \`'h-32 md:h-40'\` | 卡片高度 Tailwind 类名 |
-| \`animationDuration\` | \`number\` | \`500\` | 动画时长（毫秒） |
+| `format` | `'12h' \| '24h'` | `'24h'` | 时间格式（12小时或24小时） |
+| `showSeconds` | `boolean` | `true` | 是否显示秒数 |
+| `onTimeChange` | `(time) => void` | - | 时间改变时的回调函数 |
+| `containerClassName` | `string` | - | 容器的额外 CSS 类名 |
+| `cardWidth` | `string` | `'w-24 md:w-28'` | 卡片宽度 Tailwind 类名 |
+| `cardHeight` | `string` | `'h-32 md:h-40'` | 卡片高度 Tailwind 类名 |
+| `animationDuration` | `number` | `500` | 动画时长（毫秒） |
 
 #### FlipCard
 
 | 属性 | 类型 | 默认值 | 描述 |
 |------|------|--------|------|
-| \`value\` | \`string\` | 必需 | 当前显示的值 |
-| \`prevValue\` | \`string\` | 必需 | 上一个显示的值 |
-| \`animationDuration\` | \`number\` | \`500\` | 动画时长（毫秒） |
-| \`cardWidth\` | \`string\` | \`'w-24'\` | 卡片宽度 Tailwind 类名 |
-| \`cardHeight\` | \`string\` | \`'h-32'\` | 卡片高度 Tailwind 类名 |
-| \`fontSize\` | \`number\` | \`90\` | 数字字体大小 |
-| \`textColor\` | \`string\` | \`'#e8e8e8'\` | 文字颜色（十六进制） |
-| \`backgroundColor\` | \`string\` | \`'#1a1a1a'\` | 背景颜色（十六进制） |
+| `value` | `string` | 必需 | 当前显示的值 |
+| `prevValue` | `string` | 必需 | 上一个显示的值 |
+| `animationDuration` | `number` | `500` | 动画时长（毫秒） |
+| `cardWidth` | `string` | `'w-24'` | 卡片宽度 Tailwind 类名 |
+| `cardHeight` | `string` | `'h-32'` | 卡片高度 Tailwind 类名 |
+| `fontSize` | `number` | `90` | 数字字体大小 |
+| `textColor` | `string` | `'#e8e8e8'` | 文字颜色（十六进制） |
+| `backgroundColor` | `string` | `'#1a1a1a'` | 背景颜色（十六进制） |
 
 ### 示例
 
 #### 倒计时器
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 import { useState, useEffect } from 'react'
 
@@ -329,11 +329,11 @@ export default function Countdown() {
 
   return <FlipClock />
 }
-\`\`\`
+```
 
 #### 记分牌
 
-\`\`\`tsx
+```tsx
 import { FlipCard } from '@flip-clock/core'
 
 export default function Scoreboard() {
@@ -345,13 +345,13 @@ export default function Scoreboard() {
     </div>
   )
 }
-\`\`\`
+```
 
 ### 自定义
 
 #### 自定义主题
 
-\`\`\`tsx
+```tsx
 import { FlipClock } from '@flip-clock/core'
 
 export default function CustomTheme() {
@@ -364,7 +364,7 @@ export default function CustomTheme() {
     />
   )
 }
-\`\`\`
+```
 
 ### 浏览器支持
 
@@ -386,7 +386,7 @@ export default function CustomTheme() {
 
 #### 开发环境设置
 
-\`\`\`bash
+```bash
 # 克隆仓库
 git clone https://github.com/yourusername/flip-clock.git
 
@@ -398,7 +398,7 @@ npm run dev
 
 # 为生产环境构建
 npm run build
-\`\`\`
+```
 
 ### 许可证
 
