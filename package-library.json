@@ -1,0 +1,57 @@
+{
+  "name": "@flip-clock/core",
+  "version": "1.0.0",
+  "description": "A beautiful, customizable React library for flip card animations inspired by classic mechanical flip clocks",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "dev": "next dev",
+    "build": "tsc && next build",
+    "build:lib": "tsc --outDir dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "keywords": [
+    "flip-clock",
+    "flip-card",
+    "flip-animation",
+    "mechanical-clock",
+    "scoreboard",
+    "react",
+    "typescript",
+    "animation",
+    "3d"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/flip-clock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/flip-clock/issues"
+  },
+  "homepage": "https://github.com/yourusername/flip-clock#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "peerDependenciesComments": {
+    "react": "Required for component rendering",
+    "react-dom": "Required for DOM operations"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
