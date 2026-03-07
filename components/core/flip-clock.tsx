@@ -64,12 +64,15 @@ export default function FlipClock({
   return (
     <div className="perspective" style={{ perspective: "1200px" }}>
       <div
-        className={`flex items-center justify-center gap-2 sm:gap-3 md:gap-6 px-4 sm:px-6 md:px-12 py-6 sm:py-8 md:py-16 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-xl sm:rounded-2xl ${containerClassName || ""}`}
+        className={`relative flex items-center justify-center gap-2 sm:gap-3 md:gap-6 px-4 sm:px-6 md:px-12 py-6 sm:py-8 md:py-16 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-xl sm:rounded-2xl ${containerClassName || ""}`}
         style={{
           boxShadow: `
-            0 40px 100px rgba(0, 0, 0, 0.9),
-            inset 0 1px 0 rgba(255, 255, 255, 0.03),
-            inset 0 -8px 20px rgba(0, 0, 0, 0.8)
+            0 18px 40px rgba(0, 0, 0, 0.45),
+            0 10px 26px rgba(0, 0, 0, 0.35),
+            0 0 40px rgba(0, 0, 0, 0.28),
+            0 0 0 1px rgba(255, 255, 255, 0.02),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06),
+            inset 0 -4px 10px rgba(0, 0, 0, 0.55)
           `,
           border: "1px solid rgba(255, 255, 255, 0.05)",
         }}

@@ -49,7 +49,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to view the flip clock.
+Then open `http://localhost:3000/retro-flip-clock` in your browser to view the flip clock (the app runs under the `/retro-flip-clock` base path in development).
 
 ## Build for Production
 
