@@ -9,7 +9,16 @@
 ![GitHub forks](https://img.shields.io/github/forks/kelaocai/retro-flip-clock)
 ![License](https://img.shields.io/github/license/kelaocai/retro-flip-clock)
 
-A beautiful, customizable React component library for displaying flip card animations inspired by classic mechanical flip clocks and scoreboards.
+## Inspiration
+
+This project is inspired by the classic flip clocks and split-flap displays
+used in airports and train stations during the 1960s–1970s.
+
+One of the most iconic designs is the **Solari Cifra 3**, created by Italian
+designer Gino Valle in 1965.
+
+The mechanical flipping animation became a symbol of industrial design and
+analog precision.
 
 ### Preview
 
