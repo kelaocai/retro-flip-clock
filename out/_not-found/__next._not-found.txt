@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[78171,["/retro-flip-clock/_next/static/chunks/0a779cc0b2c93eee.js","/retro-flip-clock/_next/static/chunks/6f83fb66c787070f.js"],"default"]
 3:I[51144,["/retro-flip-clock/_next/static/chunks/0a779cc0b2c93eee.js","/retro-flip-clock/_next/static/chunks/6f83fb66c787070f.js"],"default"]
-0:{"buildId":"4vJXgOhRpNJoBveK3vAxX","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"mP-RYLWpkSpJtYcceO9Y1","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
