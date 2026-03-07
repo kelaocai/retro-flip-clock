@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import FlipClock from "@/components/flip-clock"
+import FlipClock from "@/components/core/flip-clock"
 import ImmersiveToggle from "@/components/immersive-toggle"
 
 export default function Page() {

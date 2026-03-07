@@ -12,6 +12,7 @@ export default function FlipClock({
   cardWidth = "w-24 md:w-28",
   cardHeight = "h-32 md:h-40",
   animationDuration = 500,
+  isImmersive = false,
 }: FlipClockProps) {
   const [time, setTime] = useState<FlipClockTimeState>({
     hours: "00",

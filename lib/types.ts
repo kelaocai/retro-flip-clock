@@ -17,6 +17,7 @@ export interface FlipClockProps {
   cardWidth?: string
   cardHeight?: string
   animationDuration?: number
+  isImmersive?: boolean
 }
 
 export interface FlipClockTimeState {
