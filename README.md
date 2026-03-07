@@ -1,5 +1,10 @@
 # Flip Clock
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml/badge.svg)](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev)
+
 A beautiful, customizable React component library for displaying flip card animations inspired by classic mechanical flip clocks and scoreboards.
 
 ## Why this exists
