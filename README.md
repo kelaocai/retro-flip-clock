@@ -8,8 +8,12 @@
 
 A beautiful, customizable React library for displaying flip card animations inspired by classic mechanical flip clocks and scoreboards.
 
+### window preview
 
 ![Screen-2025-12-01-123313](https://github.com/user-attachments/assets/a1bbc5cb-aa56-4690-9484-9164ab3ccf13)
+
+### full screen
+<img width="1916" height="1239" alt="SCR-20260307-qtni" src="https://github.com/user-attachments/assets/562fdafd-32dd-4f5a-b48f-bf1aae11c4c6" />
 
 
 ### DEMO
