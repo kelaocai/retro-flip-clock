@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml/badge.svg)](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev)
 
