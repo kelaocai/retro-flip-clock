@@ -169,7 +169,7 @@ export default function Scoreboard() {
 
 ## Demo
 
-Live demo: https://retro-flip-clock.vercel.app
+Live demo: https://kelaocai.github.io/retro-flip-clock/
 
 ## Browser Support
 
