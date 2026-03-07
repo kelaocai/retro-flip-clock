@@ -15,6 +15,15 @@ export default function Page() {
     const handleFullscreenChange = () => {
       if (!document.fullscreenElement) {
         setIsImmersive(false)
+
+        const orientation = (screen as any).orientation
+        if (orientation && typeof orientation.unlock === "function") {
+          try {
+            orientation.unlock()
+          } catch {
+            // Some browsers may not support unlock or may ignore it
+          }
+        }
       }
     }
 
@@ -22,11 +31,32 @@ export default function Page() {
     return () => document.removeEventListener("fullscreenchange", handleFullscreenChange)
   }, [])
 
+  const handleExitImmersive = () => {
+    setIsImmersive(false)
+
+    if (typeof document !== "undefined") {
+      if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {
+          // Exit fullscreen may be denied; fall back to state-only change
+        })
+      }
+
+      const orientation = (screen as any).orientation
+      if (orientation && typeof orientation.unlock === "function") {
+        try {
+          orientation.unlock()
+        } catch {
+          // Best-effort only
+        }
+      }
+    }
+  }
+
   if (!mounted) return null
 
   return (
     <>
-      <ImmersiveToggle onToggle={setIsImmersive} />
+      <ImmersiveToggle isImmersive={isImmersive} onToggle={setIsImmersive} />
 
       {isImmersive ? (
         <div className="fixed inset-0 bg-black flex items-center justify-center overflow-hidden">
@@ -35,6 +65,30 @@ export default function Page() {
               <p className="text-gray-500 text-sm font-light tracking-wider">Press ESC to exit</p>
             </div>
           </div>
+
+          <div className="fixed bottom-5 left-0 right-0 flex justify-center z-50">
+            <button
+              onClick={handleExitImmersive}
+              className="h-9 w-9 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 border border-white/15 text-gray-200 bg-white/5 hover:bg-white/10 active:bg-white/15 shadow-sm"
+            >
+              <span className="sr-only">Exit full screen</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-4 w-4 text-gray-200/80"
+              >
+                <path
+                  d="M7 10.5L12 15.5L17 10.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
           <div className="w-full h-full flex items-center justify-center" style={{ perspective: "2000px" }}>
             <FlipClock isImmersive={true} />
           </div>
