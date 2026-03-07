@@ -20,6 +20,8 @@ designer Gino Valle in 1965.
 The mechanical flipping animation became a symbol of industrial design and
 analog precision.
 
+📚 Extended Reading: [Flip Clock Design History](./docs/flip_clock_history.en.md)
+
 ### Preview
 
 ![Flip Clock Preview](https://github.com/user-attachments/assets/a1bbc5cb-aa56-4690-9484-9164ab3ccf13)
