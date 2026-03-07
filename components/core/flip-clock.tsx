@@ -9,8 +9,8 @@ export default function FlipClock({
   showSeconds = true,
   onTimeChange,
   containerClassName,
-  cardWidth = "w-24 md:w-28",
-  cardHeight = "h-32 md:h-40",
+  cardWidth = "w-16 sm:w-20 md:w-24 lg:w-28",
+  cardHeight = "h-24 sm:h-28 md:h-32 lg:h-40",
   animationDuration = 500,
   isImmersive = false,
 }: FlipClockProps) {
@@ -64,7 +64,7 @@ export default function FlipClock({
   return (
     <div className="perspective" style={{ perspective: "1200px" }}>
       <div
-        className={`flex items-center justify-center gap-4 md:gap-6 px-8 md:px-12 py-12 md:py-16 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-2xl ${containerClassName || ""}`}
+        className={`flex items-center justify-center gap-2 sm:gap-3 md:gap-6 px-4 sm:px-6 md:px-12 py-6 sm:py-8 md:py-16 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-xl sm:rounded-2xl ${containerClassName || ""}`}
         style={{
           boxShadow: `
             0 40px 100px rgba(0, 0, 0, 0.9),
@@ -74,10 +74,10 @@ export default function FlipClock({
           border: "1px solid rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-b from-[#333333] to-transparent rounded-t-2xl" />
-        <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#0a0a0a] to-transparent rounded-b-2xl" />
+        <div className="absolute top-0 left-0 right-0 h-2 sm:h-3 bg-gradient-to-b from-[#333333] to-transparent rounded-t-xl sm:rounded-t-2xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-3 sm:h-4 bg-gradient-to-t from-[#0a0a0a] to-transparent rounded-b-xl sm:rounded-b-2xl" />
 
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-1 sm:gap-3">
           <FlipCard
             value={time.hours}
             prevValue={prevTimeRef.current.hours}
@@ -85,18 +85,18 @@ export default function FlipClock({
             cardHeight={cardHeight}
             animationDuration={animationDuration}
           />
-          <span className="text-[#888888] text-xs md:text-sm tracking-widest font-mono font-bold">H</span>
+          <span className="text-[#888888] text-[10px] sm:text-xs md:text-sm tracking-widest font-mono font-bold">H</span>
         </div>
 
-        <div className="flex flex-col items-center gap-3 px-1">
-          <svg width="32" height="120" viewBox="0 0 32 120" className="drop-shadow-lg">
+        <div className="flex flex-col items-center gap-1 sm:gap-3 px-0.5 sm:px-1">
+          <svg width="20" height="60" viewBox="0 0 32 120" className="drop-shadow-lg sm:w-24 sm:h-120">
             <circle cx="16" cy="30" r="3" fill="#999999" />
             <circle cx="16" cy="90" r="3" fill="#999999" />
           </svg>
-          <div className="w-6 h-px bg-gradient-to-r from-transparent via-[#444444] to-transparent" />
+          <div className="w-3 sm:w-6 h-px bg-gradient-to-r from-transparent via-[#444444] to-transparent" />
         </div>
 
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-1 sm:gap-3">
           <FlipCard
             value={time.minutes}
             prevValue={prevTimeRef.current.minutes}
@@ -104,20 +104,20 @@ export default function FlipClock({
             cardHeight={cardHeight}
             animationDuration={animationDuration}
           />
-          <span className="text-[#888888] text-xs md:text-sm tracking-widest font-mono font-bold">M</span>
+          <span className="text-[#888888] text-[10px] sm:text-xs md:text-sm tracking-widest font-mono font-bold">M</span>
         </div>
 
         {showSeconds && (
           <>
-            <div className="flex flex-col items-center gap-3 px-1">
-              <svg width="32" height="120" viewBox="0 0 32 120" className="drop-shadow-lg">
+            <div className="flex flex-col items-center gap-1 sm:gap-3 px-0.5 sm:px-1">
+              <svg width="20" height="60" viewBox="0 0 32 120" className="drop-shadow-lg sm:w-24 sm:h-120">
                 <circle cx="16" cy="30" r="3" fill="#999999" />
                 <circle cx="16" cy="90" r="3" fill="#999999" />
               </svg>
-              <div className="w-6 h-px bg-gradient-to-r from-transparent via-[#444444] to-transparent" />
+              <div className="w-3 sm:w-6 h-px bg-gradient-to-r from-transparent via-[#444444] to-transparent" />
             </div>
 
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-1 sm:gap-3">
               <FlipCard
                 value={time.seconds}
                 prevValue={prevTimeRef.current.seconds}
@@ -125,7 +125,7 @@ export default function FlipClock({
                 cardHeight={cardHeight}
                 animationDuration={animationDuration}
               />
-              <span className="text-[#888888] text-xs md:text-sm tracking-widest font-mono font-bold">S</span>
+              <span className="text-[#888888] text-[10px] sm:text-xs md:text-sm tracking-widest font-mono font-bold">S</span>
             </div>
           </>
         )}

@@ -41,26 +41,28 @@ export default function Page() {
         </div>
       ) : (
         <div
-          className="min-h-screen flex items-center justify-center p-4"
+          className="min-h-screen flex items-center justify-center px-4 md:px-8"
           style={{
             background: "linear-gradient(135deg, #2a2620 0%, #3d3530 50%, #2a2620 100%)",
           }}
         >
-          <div className="flex flex-col items-center gap-12">
+          <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-4xl">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-retro-gold mb-2 tracking-widest font-mono drop-shadow-lg">
-                ⏱ FLIP CLOCK
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-retro-gold mb-2 tracking-widest font-mono drop-shadow-lg">
+                FLIP CLOCK
               </h1>
-              <p className="text-retro-tan text-lg md:text-xl tracking-wider font-light">
+              <p className="text-retro-tan text-sm md:text-lg lg:text-xl tracking-wider font-light">
                 Classic Mechanical Timepiece
               </p>
-              <div className="w-32 h-px bg-gradient-to-r from-transparent via-retro-gold to-transparent mt-4 mx-auto" />
+              <div className="w-24 md:w-32 h-px bg-gradient-to-r from-transparent via-retro-gold to-transparent mt-4 mx-auto" />
             </div>
 
-            <FlipClock />
+            <div className="w-full flex justify-center overflow-hidden">
+              <FlipClock />
+            </div>
 
             {/* Footer */}
-            <div className="text-center mt-8">
+            <div className="text-center mt-4 md:mt-8">
               <p className="text-retro-tan text-xs md:text-sm tracking-widest">© 1976 — MECHANICAL ENGINEERING</p>
               <p className="text-retro-brown text-xs mt-2">Made with analog precision</p>
             </div>
