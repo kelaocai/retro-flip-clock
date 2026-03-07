@@ -37,25 +37,27 @@ Live demo: https://kelaocai.github.io/retro-flip-clock/
 
 ## Usage
 
-Clone the repository:
-
 ```bash
+# Clone the repository
 git clone https://github.com/kelaocai/retro-flip-clock.git
 
+# Install dependencies
+cd retro-flip-clock
+npm install
+
+# Start development server
+npm run dev
 ```
-Open:
-index.html
 
-## Embed in Your Website
+Open http://localhost:3000 to view the flip clock.
 
-You can easily embed the flip clock into any webpage.
+## Build for Production
 
-Example:
+```bash
+npm run build
 ```
-<div id="clock"></div>
-<script src="flip-clock.js"></script>
 
-```
+The static files will be generated in the `out` directory.
 ## Browser Support
 
 - Chrome (latest)
