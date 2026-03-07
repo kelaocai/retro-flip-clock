@@ -42,7 +42,7 @@ lerna-debug.log*
 
 # Next.js
 .next/
-out/
+# out/ is needed for GitHub Pages deployment
 
 # Turbo
 .turbo/
