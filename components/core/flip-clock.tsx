@@ -106,14 +106,16 @@ export default function FlipClock(props: FlipClockProps) {
           isImmersive ? "w-[92vw] max-w-[1100px] lg:max-w-[1400px] xl:max-w-[1600px]" : ""
         } ${containerClassName || ""}`}
         style={{
-          boxShadow: `
+          boxShadow: isImmersive
+            ? `
             0 18px 40px rgba(0, 0, 0, 0.45),
             0 10px 26px rgba(0, 0, 0, 0.35),
             0 0 40px rgba(0, 0, 0, 0.28),
             0 0 0 1px rgba(255, 255, 255, 0.02),
             inset 0 1px 0 rgba(255, 255, 255, 0.06),
             inset 0 -4px 10px rgba(0, 0, 0, 0.55)
-          `,
+          `
+            : "none",
           border: "1px solid rgba(255, 255, 255, 0.05)",
         }}
       >
