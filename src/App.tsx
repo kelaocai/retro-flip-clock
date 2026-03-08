@@ -1,17 +1,14 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import FlipClock from "@/components/core/flip-clock"
 import ImmersiveToggle from "@/components/immersive-toggle"
 
-export default function Page() {
+export default function App() {
   const [mounted, setMounted] = useState(false)
   const [isImmersive, setIsImmersive] = useState(false)
 
   useEffect(() => {
     setMounted(true)
 
-    // Handle fullscreen changes
     const handleFullscreenChange = () => {
       if (!document.fullscreenElement) {
         setIsImmersive(false)
@@ -109,7 +106,6 @@ export default function Page() {
               <FlipClock />
             </div>
 
-            {/* Footer */}
             <div className="text-center mt-4 md:mt-8">
               <p className="text-retro-tan text-xs md:text-sm tracking-widest">© 1976 — MECHANICAL ENGINEERING</p>
               <p className="text-retro-brown text-xs mt-2">Made with analog precision</p>

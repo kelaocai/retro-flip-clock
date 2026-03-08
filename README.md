@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml/badge.svg)](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black.svg)](https://nextjs.org)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF.svg)](https://vitejs.dev)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev)
 ![GitHub stars](https://img.shields.io/github/stars/kelaocai/retro-flip-clock)
 ![GitHub forks](https://img.shields.io/github/forks/kelaocai/retro-flip-clock)
@@ -60,7 +60,7 @@ npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000/retro-flip-clock` in your browser to view the flip clock (the app runs under the `/retro-flip-clock` base path in development).
+Then open `http://localhost:5173` in your browser to view the flip clock.
 
 ## Build for Production
 
@@ -68,7 +68,7 @@ Then open `http://localhost:3000/retro-flip-clock` in your browser to view the f
 npm run build
 ```
 
-The static files will be generated in the `out` directory.
+The static files will be generated in the `dist` directory.
 ## Browser Support
 
 - Chrome (latest)

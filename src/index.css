@@ -83,8 +83,6 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -122,7 +120,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* <CHANGE> Add custom Tailwind colors for retro theme */
   --color-retro-cream: #f5ead6;
   --color-retro-beige: #e8dcc8;
   --color-retro-tan: #d4c4a8;
@@ -132,7 +129,6 @@
 }
 
 @layer utilities {
-  /* <CHANGE> Add retro color utility classes */
   .bg-retro-cream {
     @apply bg-[#f5ead6];
   }
@@ -184,3 +180,4 @@
     @apply bg-background text-foreground;
   }
 }
+
