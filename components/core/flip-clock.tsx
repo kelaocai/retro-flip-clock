@@ -17,9 +17,20 @@ export default function FlipClock(props: FlipClockProps) {
   } = props
 
   const effectiveCardWidth =
-    cardWidth ?? (isImmersive ? "w-[18vw] sm:w-[16vw] md:w-[14vw] lg:w-32" : "w-16 sm:w-20 md:w-24 lg:w-28")
+    cardWidth ??
+    (isImmersive
+      ? // Immersive: mobile 优先用 vw，桌面给更大的固定宽度
+        "w-[18vw] sm:w-[16vw] md:w-[260px] lg:w-[320px] xl:w-[380px]"
+      : // Normal: 适中比例，桌面略放大
+        "w-20 sm:w-24 md:w-28 lg:w-32 xl:w-40")
+
   const effectiveCardHeight =
-    cardHeight ?? (isImmersive ? "h-[51vh] sm:h-[45vh] md:h-[39vh] lg:h-[4.5rem]" : "h-24 sm:h-28 md:h-32 lg:h-40")
+    cardHeight ??
+    (isImmersive
+      ? // Immersive: mobile 用 vh，桌面给更高的固定高度
+        "h-[32vh] sm:h-[34vh] md:h-[260px] lg:h-[320px] xl:h-[380px]"
+      : // Normal: 比例略高一些
+        "h-28 sm:h-32 md:h-36 lg:h-44 xl:h-52")
 
   const [time, setTime] = useState<FlipClockTimeState>({
     hours: "00",
@@ -86,9 +97,13 @@ export default function FlipClock(props: FlipClockProps) {
     <div className="perspective" style={{ perspective: "1200px" }}>
       <div
         className={`relative flex items-center justify-center ${
-          isImmersive ? "gap-1 sm:gap-2 md:gap-4" : "gap-2 sm:gap-3 md:gap-6"
-        } px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-14 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-xl sm:rounded-2xl ${
-          isImmersive ? "w-[92vw] max-w-[1000px]" : ""
+          isImmersive ? "gap-2 sm:gap-4 md:gap-8" : "gap-2 sm:gap-3 md:gap-6"
+        } ${
+          isImmersive
+            ? "px-6 sm:px-10 md:px-16 lg:px-20 py-8 sm:py-12 md:py-16 lg:py-20"
+            : "px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-14"
+        } bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] rounded-xl sm:rounded-2xl ${
+          isImmersive ? "w-[92vw] max-w-[1100px] lg:max-w-[1400px] xl:max-w-[1600px]" : ""
         } ${containerClassName || ""}`}
         style={{
           boxShadow: `

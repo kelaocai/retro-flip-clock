@@ -60,12 +60,6 @@ export default function Page() {
 
       {isImmersive ? (
         <div className="fixed inset-0 bg-black flex items-center justify-center overflow-hidden">
-          <div className="fixed inset-0 flex items-end justify-center pb-8 pointer-events-none">
-            <div className="text-center">
-              <p className="text-gray-500 text-sm font-light tracking-wider">Press ESC to exit</p>
-            </div>
-          </div>
-
           <div className="fixed bottom-5 left-0 right-0 flex justify-center z-50">
             <button
               onClick={handleExitImmersive}
@@ -99,8 +93,8 @@ export default function Page() {
           style={{
             background: "linear-gradient(135deg, #2a2620 0%, #3d3530 50%, #2a2620 100%)",
           }}
-        >
-          <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-4xl">
+          >
+          <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-5xl xl:max-w-6xl">
             <div className="text-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-retro-gold mb-2 tracking-widest font-mono drop-shadow-lg">
                 FLIP CLOCK
