@@ -1,5 +1,11 @@
 # Flip Clock
 
+> **推荐版本**：这是基于 Vite + React 的轻量级版本（推荐使用）。
+>
+> 如需 Next.js 版本，请切换到 [nextjs 分支](https://github.com/kelaocai/retro-flip-clock/tree/nextjs)。
+>
+> 📖 查看 [版本对比说明](./VERSIONS.md) 了解如何选择合适的版本。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml/badge.svg)](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org)
