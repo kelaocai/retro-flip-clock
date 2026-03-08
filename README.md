@@ -1,5 +1,9 @@
 # Flip Clock
 
+> **注意**：这是 Next.js 版本分支。如需使用更轻量的 Vite 版本，请切换到 [main 分支](https://github.com/kelaocai/retro-flip-clock/tree/main)。
+>
+> 查看 [NEXTJS.md](./NEXTJS.md) 了解两个版本的详细对比。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml/badge.svg)](https://github.com/kelaocai/retro-flip-clock/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org)
