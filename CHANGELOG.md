@@ -24,6 +24,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.2.0] - 2026-03-08
+
+### Changed
+- Improve FlipClock timing to align updates precisely with real-time seconds
+- Refine flip animations with better 3D rendering hints and reduced unnecessary updates
+- Enhance immersive fullscreen experience on mobile and desktop (orientation lock, exit control, responsive sizing)
+- Adjust layout so the clock scales more elegantly on wide desktop viewports
+- Simplify non-fullscreen appearance by removing heavy background shadows for a cleaner look
+
 ## [1.0.0] - 2024-01-XX
 
 ### Added
