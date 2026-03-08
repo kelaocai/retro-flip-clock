@@ -79,6 +79,9 @@ export default function FlipCard({
           justify-content: center;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
           transform-origin: bottom center;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          will-change: transform;
           animation: ${isFlipping ? `flipDown ${animationDuration}ms cubic-bezier(0.645, 0.045, 0.355, 1) forwards` : "none"};
         }
 
@@ -97,6 +100,9 @@ export default function FlipCard({
           justify-content: center;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
           transform-origin: top center;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          will-change: transform;
           animation: ${isFlipping ? `flipUp ${animationDuration}ms cubic-bezier(0.645, 0.045, 0.355, 1) forwards` : "none"};
         }
 

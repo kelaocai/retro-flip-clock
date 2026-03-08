@@ -34,7 +34,9 @@ export default function FlipClock(props: FlipClockProps) {
   })
 
   useEffect(() => {
-    const updateTime = () => {
+    let timeoutId: number | undefined
+
+    const tick = () => {
       const now = new Date()
       let hours = now.getHours()
 
@@ -42,30 +44,42 @@ export default function FlipClock(props: FlipClockProps) {
         hours = hours % 12 || 12
       }
 
-      const newTime = {
+      const newTime: FlipClockTimeState = {
         hours: String(hours).padStart(2, "0"),
         minutes: String(now.getMinutes()).padStart(2, "0"),
         seconds: String(now.getSeconds()).padStart(2, "0"),
       }
 
       setTime((currentTime) => {
-        if (
-          currentTime.hours !== newTime.hours ||
-          currentTime.minutes !== newTime.minutes ||
-          currentTime.seconds !== newTime.seconds
-        ) {
-          prevTimeRef.current = { ...currentTime }
-          onTimeChange?.(newTime)
-          return newTime
+        const hoursChanged = currentTime.hours !== newTime.hours
+        const minutesChanged = currentTime.minutes !== newTime.minutes
+        const secondsChanged = currentTime.seconds !== newTime.seconds
+
+        if (!hoursChanged && !minutesChanged && !secondsChanged) {
+          return currentTime
         }
-        return currentTime
+
+        prevTimeRef.current = {
+          hours: hoursChanged ? currentTime.hours : prevTimeRef.current.hours,
+          minutes: minutesChanged ? currentTime.minutes : prevTimeRef.current.minutes,
+          seconds: secondsChanged ? currentTime.seconds : prevTimeRef.current.seconds,
+        }
+
+        onTimeChange?.(newTime)
+        return newTime
       })
+
+      const delay = 1000 - now.getMilliseconds()
+      timeoutId = window.setTimeout(tick, delay)
     }
 
-    updateTime()
-    const interval = setInterval(updateTime, 1000)
+    tick()
 
-    return () => clearInterval(interval)
+    return () => {
+      if (timeoutId !== undefined) {
+        window.clearTimeout(timeoutId)
+      }
+    }
   }, [format, onTimeChange])
 
   return (
